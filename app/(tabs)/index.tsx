@@ -5,6 +5,7 @@ import Typo from '@/components/Typo'
 import { signOut } from 'firebase/auth'
 import { auth } from '../(auth)/config/firebase'
 import Button from '@/components/Button'
+import ScreenWrapper from '@/components/ScreenWrapper'
 const Home = () => {
 
     const handleLogout = async ()=>{
@@ -18,12 +19,12 @@ const Home = () => {
 
 
   return (
-    <View>
-      <Text>Home</Text>
+    <ScreenWrapper>
+      <Typo>Home</Typo>
       <Button onPress={handleLogout}>
         <Typo color={colors.black}>Llogout</Typo>
       </Button>
-    </View>
+    </ScreenWrapper>
   )
 }
 
